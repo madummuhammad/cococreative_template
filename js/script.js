@@ -64,11 +64,14 @@ jQuery(function ($) {
 
 		// scroll to top btn show/hide
 		function scrollTopBtn() {
-			var scrollToTop = $('#back-to-top'),
+			var scrollToTop = $('#back-to-top');
+			var wa=$("#whatsapp");
 			scroll = $(window).scrollTop();
 			if (scroll >= 50) {
+				wa.fadeIn()
 				scrollToTop.fadeIn();
 			} else {
+				wa.fadeOut();
 				scrollToTop.fadeOut();
 			}
 		}
