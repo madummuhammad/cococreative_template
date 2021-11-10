@@ -715,6 +715,7 @@ ul.top-info li p.info-text {
 
 .header-two .navbar-fixed {
   background-color: #fff;
+  box-shadow: 0px 0px 16px 0px #00000040;
 }
 
 ul.navbar-nav > li > a {
@@ -733,7 +734,11 @@ ul.navbar-nav > li > a {
 
 ul.navbar-nav > li:hover > a,
 ul.navbar-nav > li.active > a {
-  color: #ffb600 !important;
+  /*color: #ffb600;*/
+  -webkit-text-decoration-color: #ffb600 !important; /* Safari */  
+  text-decoration-color: #ffb600 !important;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /*-- Logo --*/

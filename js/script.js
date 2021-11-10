@@ -41,7 +41,7 @@ jQuery(function ($) {
 			if ($(window).scrollTop() > oTop) {
 				$('.counterUp').each(function () {
 					var $this = $(this),
-						countTo = $this.attr('data-count');
+					countTo = $this.attr('data-count');
 					$({
 						countNum: $this.text()
 					}).animate({
@@ -65,7 +65,7 @@ jQuery(function ($) {
 		// scroll to top btn show/hide
 		function scrollTopBtn() {
 			var scrollToTop = $('#back-to-top'),
-				scroll = $(window).scrollTop();
+			scroll = $(window).scrollTop();
 			if (scroll >= 50) {
 				scrollToTop.fadeIn();
 			} else {
@@ -73,6 +73,26 @@ jQuery(function ($) {
 			}
 		}
 		scrollTopBtn();
+
+		function goTo(){
+			var btn_navbar=$(".btn-navbar");
+			for (let i = 0; i < btn_navbar.length; i++) {
+				btn_navbar[i].onclick = function () {
+					var target = $(this).data('target');
+					var valScroll=$(target).offset().top;
+					window.scrollTo({
+						top: valScroll-20,
+						left: 100,
+						behavior: 'smooth'
+					});
+				}
+			}
+		}
+
+		goTo();
+
+		
+
 	});
 
 
@@ -88,6 +108,23 @@ jQuery(function ($) {
 			});
 		}
 		navSearch();
+
+		function goTo(){
+			var btn_navbar=$(".btn-navbar");
+			for (let i = 0; i < btn_navbar.length; i++) {
+				btn_navbar[i].onclick = function () {
+					var target = $(this).data('target');
+					var valScroll=$(target).offset().top;
+					window.scrollTo({
+						top: valScroll-40,
+						left: 100,
+						behavior: 'smooth'
+					});
+				}
+			}
+		}
+
+		goTo();
 
 		// navbarDropdown
 		function navbarDropdown() {
@@ -218,26 +255,26 @@ jQuery(function ($) {
 				prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
 				nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>',
 				responsive: [{
-						breakpoint: 992,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 3
-						}
-					},
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2
-						}
-					},
-					{
-						breakpoint: 481,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1
-						}
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3
 					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 481,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
 				]
 			});
 		}
