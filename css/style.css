@@ -385,7 +385,7 @@ blockquote.text-center:before {
   left: 50%;
   top: 10px;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 blockquote.text-right {
@@ -576,7 +576,7 @@ a[href^=tel] {
 /* Top Bar
 ================================================== */
 .top-bar {
-  padding: 8px 0;
+  padding: 0px 0;
   background: #ebebeb;
   position: relative;
 }
@@ -705,9 +705,12 @@ ul.top-info li p.info-text {
 }
 
 .header-two {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
   padding: 15px 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
 
 .header-two .navbar-fixed {
@@ -972,8 +975,12 @@ ul.navbar-nav > li > a {
   transition: 350ms;
 }
 
-.navbar-light ul.navbar-nav > li > a {
+.navbar-fixed .navbar-light ul.navbar-nav > li > a {
   color: #000 !important;
+}
+
+.navbar-light ul.navbar-nav > li > a {
+  /*color: #000 !important;*/
   font-size: 13px;
 }
 
@@ -1375,7 +1382,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   z-index: 5;
   display: inline-block;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: transparent;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -1455,14 +1462,14 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   position: absolute;
   width: 100%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (max-width: 767px) {
   .box-slider-content {
     top: auto;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     left: 20px;
     bottom: 20px;
     width: calc(100% - 40px);
@@ -1628,7 +1635,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   border-style: solid;
   border-color: #ffb600 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .featured-tab .lead {
@@ -1943,13 +1950,13 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .shuffle-item .project-img-container img {
   -webkit-transform: perspective(1px) scale3d(1.1, 1.1, 1);
-          transform: perspective(1px) scale3d(1.1, 1.1, 1);
+  transform: perspective(1px) scale3d(1.1, 1.1, 1);
   transition: all 400ms;
 }
 
 .shuffle-item .project-img-container:hover img {
   -webkit-transform: perspective(1px) scale3d(1.15, 1.15, 1);
-          transform: perspective(1px) scale3d(1.15, 1.15, 1);
+  transform: perspective(1px) scale3d(1.15, 1.15, 1);
 }
 
 .shuffle-item .project-img-container:after {
@@ -1979,14 +1986,14 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
   opacity: 0;
   -webkit-transform: perspective(1px) scale3d(0, 0, 0);
-          transform: perspective(1px) scale3d(0, 0, 0);
+  transform: perspective(1px) scale3d(0, 0, 0);
   transition: all 400ms;
 }
 
 .shuffle-item .project-img-container:hover .gallery-popup .gallery-icon {
   opacity: 1;
   -webkit-transform: perspective(1px) scale3d(1, 1, 1);
-          transform: perspective(1px) scale3d(1, 1, 1);
+  transform: perspective(1px) scale3d(1, 1, 1);
 }
 
 .shuffle-item .project-img-container .project-item-info {
@@ -2003,7 +2010,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .shuffle-item .project-img-container .project-item-info-content {
   opacity: 0;
   -webkit-transform: perspective(1px) translate3d(0, 15px, 0);
-          transform: perspective(1px) translate3d(0, 15px, 0);
+  transform: perspective(1px) translate3d(0, 15px, 0);
   transition: all 400ms;
 }
 
@@ -2032,7 +2039,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .shuffle-item .project-img-container:hover .project-item-info-content {
   opacity: 1;
   -webkit-transform: perspective(1px) translate3d(0, 0, 0);
-          transform: perspective(1px) translate3d(0, 0, 0);
+  transform: perspective(1px) translate3d(0, 0, 0);
 }
 
 .general-btn .btn-primary:hover {
@@ -2058,7 +2065,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .project-item:hover img {
   -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .project-item-content {
@@ -2074,7 +2081,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   top: -70px;
   right: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .project-slide .owl-nav > div {
@@ -2188,9 +2195,9 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .clients-logo img {
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
   -webkit-filter: gray;
-          filter: gray;
+  filter: gray;
 }
 
 /* Testimonial
@@ -2645,7 +2652,7 @@ img.testimonial-thumb {
   width: 100%;
   z-index: 1;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .banner-heading {
@@ -2679,7 +2686,7 @@ img.testimonial-thumb {
   z-index: 5;
   display: inline-block;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: transparent;
   text-shadow: none;
   transition: all .25s ease;
@@ -2754,13 +2761,13 @@ img.testimonial-thumb {
   transition: 350ms;
   opacity: .6;
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .partner-logo:hover img {
   opacity: 1;
   -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 #partners-carousel .partner-logo {
@@ -2804,12 +2811,12 @@ img.testimonial-thumb {
 
 .team-slide .carousel-control.left {
   -webkit-transform: translateX(calc(-50% - 25px));
-          transform: translateX(calc(-50% - 25px));
+  transform: translateX(calc(-50% - 25px));
 }
 
 .team-slide .carousel-control.right {
   -webkit-transform: translateX(calc(-50% + 25px));
-          transform: translateX(calc(-50% + 25px));
+  transform: translateX(calc(-50% + 25px));
 }
 
 .team-slide .carousel-control.slick-disabled {
